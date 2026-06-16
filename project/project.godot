@@ -11,19 +11,16 @@ config_version=5
 [application]
 
 config/name="trans-jam-26"
-run/main_scene="res://map.tscn"
+run/main_scene="uid://dndkpoo2di117"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=256
-window/size/viewport_height=144
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/sharp_corners=true
-window/size/window_width_override=768
-window/size/window_height_override=432
-window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
+window/stretch/mode="canvas_items"
 
 [editor]
 
