@@ -8,10 +8,10 @@
 shader = ExtResource("1_tgvcj")
 shader_parameter/background_color = Color(0.71778154, 0.67424935, 0.6453425, 1)
 shader_parameter/scanline_strength = 1.0
-shader_parameter/scanline_width = 0.0
-shader_parameter/shadow_displacement = Vector2(0.15, 0.15)
-shader_parameter/shadow_strength = 0.14400000684
-shader_parameter/brightness = 0.64400003059
+shader_parameter/scanline_width = 0.150000007125
+shader_parameter/shadow_displacement = Vector2(0.05, 0.05)
+shader_parameter/shadow_strength = 0.250000011875
+shader_parameter/brightness = 0.66000003135
 shader_parameter/zoom = 1.0
 
 [node name="node_2d" type="Node2D" unique_id=558646275]
@@ -59,9 +59,9 @@ text = "LCD gap"
 [node name="lcd_gap" type="HSlider" parent="margin_container/panel_container_2/v_box_container" unique_id=1211588184]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-max_value = 0.9
+max_value = 1.0
 step = 0.01
-value = 0.1
+value = 0.15
 allow_greater = true
 
 [node name="label_2" type="Label" parent="margin_container/panel_container_2/v_box_container" unique_id=1382822156]
@@ -73,7 +73,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.01
-value = 0.6
+value = 1.0
 
 [node name="label_3" type="Label" parent="margin_container/panel_container_2/v_box_container" unique_id=526569159]
 layout_mode = 2
@@ -84,7 +84,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.01
-value = 0.15
+value = 0.05
 allow_greater = true
 
 [node name="label_4" type="Label" parent="margin_container/panel_container_2/v_box_container" unique_id=2038870146]
@@ -96,7 +96,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.01
-value = 0.15
+value = 0.05
 allow_greater = true
 
 [node name="label_5" type="Label" parent="margin_container/panel_container_2/v_box_container" unique_id=1099976578]
@@ -108,7 +108,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.01
-value = 0.1
+value = 0.25
 
 [node name="label_6" type="Label" parent="margin_container/panel_container_2/v_box_container" unique_id=1795011813]
 layout_mode = 2
@@ -119,7 +119,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.01
-value = 0.05
+value = 0.66
 allow_greater = true
 allow_lesser = true
 
@@ -131,7 +131,7 @@ text = "Zoom"
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 min_value = 1.0
-max_value = 5.0
+max_value = 25.0
 step = 0.1
 value = 1.0
 allow_greater = true
