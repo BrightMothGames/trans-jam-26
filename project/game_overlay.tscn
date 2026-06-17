@@ -27,7 +27,9 @@ stretch_shrink = 5
 script = ExtResource("2_a4b8y")
 
 [node name="sub_viewport" type="SubViewport" parent="." unique_id=1350890041]
+handle_input_locally = false
 size = Vector2i(256, 144)
+render_target_update_mode = 4
 
 [node name="node_2d" parent="sub_viewport" unique_id=27854237 instance=ExtResource("1_d6a45")]
 
