@@ -8,13 +8,15 @@ uniform vec2 shadow_displacement = vec2(.15);
 uniform float shadow_strength : hint_range(0, 1) = .25;
 uniform float brightness : hint_range(0, 1) = .6;
 
+uniform float zoom : hint_range(1.0, 5.0, .1) = 1.;
+
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
 
 void fragment() {
 	vec4 color = texture(TEXTURE, UV);
-	vec2 scaled_uv = vec2(UV.x * PI * 256., UV.y * PI * 144.);
+	vec2 scaled_uv = vec2(UV.x * PI * 256. / zoom, UV.y * PI * 144. / zoom);
 	float hscanlines = pow(abs(cos(scaled_uv.x)) + scanline_width / 10., (1. - scanline_width) * 100.);
 	float vscanlines = pow(abs(cos(scaled_uv.y)) + scanline_width / 10., (1. - scanline_width) * 100.);
 	float scanlines = clamp(hscanlines + vscanlines, 0., 1.);

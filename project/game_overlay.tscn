@@ -12,29 +12,33 @@ shader_parameter/scanline_width = 0.0
 shader_parameter/shadow_displacement = Vector2(0.15, 0.15)
 shader_parameter/shadow_strength = 0.14400000684
 shader_parameter/brightness = 0.64400003059
+shader_parameter/zoom = 1.0
 
-[node name="game_overlay" type="SubViewportContainer" unique_id=1856797561]
+[node name="node_2d" type="Node2D" unique_id=558646275]
+
+[node name="game_overlay" type="SubViewportContainer" parent="." unique_id=1856797561]
 texture_filter = 1
 material = SubResource("ShaderMaterial_tgvcj")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 144.0
 grow_horizontal = 2
 grow_vertical = 2
-offset_transform_enabled = true
-stretch = true
-stretch_shrink = 5
 script = ExtResource("2_a4b8y")
 
-[node name="sub_viewport" type="SubViewport" parent="." unique_id=1350890041]
+[node name="sub_viewport" type="SubViewport" parent="game_overlay" unique_id=1350890041]
 handle_input_locally = false
 size = Vector2i(256, 144)
 render_target_update_mode = 4
 
-[node name="node_2d" parent="sub_viewport" unique_id=27854237 instance=ExtResource("1_d6a45")]
+[node name="node_2d" parent="game_overlay/sub_viewport" unique_id=27854237 instance=ExtResource("1_d6a45")]
 
 [node name="margin_container" type="MarginContainer" parent="." unique_id=750042023]
-layout_mode = 2
+offset_right = 256.0
+offset_bottom = 178.0
+scale = Vector2(0.2, 0.2)
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -119,9 +123,24 @@ value = 0.05
 allow_greater = true
 allow_lesser = true
 
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/lcd_gap" to="." method="_on_lcd_gap_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/lcd_str" to="." method="_on_lcd_str_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_x" to="." method="_on_shad_x_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_y" to="." method="_on_shad_y_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_str" to="." method="_on_shad_str_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/bright" to="." method="_on_bright_value_changed"]
+[node name="label_7" type="Label" parent="margin_container/panel_container_2/v_box_container" unique_id=1109461104]
+layout_mode = 2
+text = "Zoom"
+
+[node name="zoom" type="HSlider" parent="margin_container/panel_container_2/v_box_container" unique_id=1833217500]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+min_value = 1.0
+max_value = 5.0
+step = 0.1
+value = 1.0
+allow_greater = true
+allow_lesser = true
+
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/lcd_gap" to="game_overlay" method="_on_lcd_gap_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/lcd_str" to="game_overlay" method="_on_lcd_str_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_x" to="game_overlay" method="_on_shad_x_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_y" to="game_overlay" method="_on_shad_y_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_str" to="game_overlay" method="_on_shad_str_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/bright" to="game_overlay" method="_on_bright_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/zoom" to="game_overlay" method="_on_zoom_value_changed"]

@@ -24,3 +24,8 @@ func _on_shad_str_value_changed(value: float) -> void:
 
 func _on_bright_value_changed(value: float) -> void:
 	shader.set_shader_parameter("brightness", value)
+
+
+func _on_zoom_value_changed(value: float) -> void:
+	shader.set_shader_parameter("zoom", value)
+	$sub_viewport/node_2d.scale = Vector2(value,value)

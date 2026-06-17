@@ -11,12 +11,6 @@ var joyL = Vector2.ZERO
 var action:bool
 var interact:bool
 
-func _ready() -> void:
-	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	#get_window().current_screen = 1
-	#get_window().mode = Window.MODE_FULLSCREEN
-	pass
-
 signal action_pressed
 signal interact_pressed
 
@@ -25,9 +19,15 @@ signal down_pressed
 signal left_pressed
 signal right_pressed
 
-func _input(event) -> void:
-	if event.is_action_pressed("LMB") and Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+func _ready() -> void:
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	#get_window().current_screen = 1
+	#get_window().mode = Window.MODE_FULLSCREEN
+	pass
+
+#func _input(event) -> void:
+	#if event.is_action_pressed("LMB") and Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _process(_delta) -> void:
 	action = Input.is_action_pressed("Action")
