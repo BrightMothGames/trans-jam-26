@@ -6,12 +6,12 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tgvcj"]
 shader = ExtResource("1_tgvcj")
-shader_parameter/background_color = Color(0.71778154, 0.67424935, 0.6453425, 1)
+shader_parameter/background_color = Color(0.5, 0.5, 0.5, 1)
 shader_parameter/scanline_strength = 1.0
-shader_parameter/scanline_width = 0.150000007125
+shader_parameter/scanline_width = 0.15
 shader_parameter/shadow_displacement = Vector2(0.05, 0.05)
-shader_parameter/shadow_strength = 0.250000011875
-shader_parameter/brightness = 0.66000003135
+shader_parameter/shadow_strength = 0.25
+shader_parameter/brightness = 0.66
 shader_parameter/zoom = 1.0
 
 [node name="node_2d" type="Node2D" unique_id=558646275]

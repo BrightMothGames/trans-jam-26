@@ -24,17 +24,17 @@ void fragment() {
 	float scanlines = clamp(hscanlines + vscanlines, 0., 1.);
 	color.rgb = mix(color.rgb, background_color, scanlines * scanline_strength);
 	
-	vec2 shadow_uv = (vec2(1. / 256., 1. / 144.) * shadow_displacement);
+	vec2 shadow_uv = (vec2(1. / 256., 1. / 144.) * shadow_displacement * vec2(zoom));
 	vec4 shadow = texture(TEXTURE, UV - shadow_uv);
 	float shadow_hscanlines = clamp(abs(mod(scaled_uv.x - shadow_displacement.x, 1.) - .5) * 100. - ((1. - scanline_width) * 50. + 1.), 0., 1.);
 	float shadow_vscanlines = clamp(abs(mod(scaled_uv.y - shadow_displacement.y, 1.) - .5) * 100. - ((1. - scanline_width) * 50. + 1.), 0., 1.);
 	float shadow_scanlines = clamp(shadow_hscanlines + shadow_vscanlines, 0., 1.);
 	shadow.rgb = mix(shadow.rgb, vec3(.0), shadow_scanlines * scanline_strength);
 	shadow.rgb *= vec3(shadow_strength);
-	shadow.rgb *= scanlines + (1. - brightness); 
+	shadow.rgb *= clamp(scanlines + (1. - brightness), 0., 1.); 
 	//color.rgb -= shadow.rgb;
 	
-	COLOR.rgb = color.rgb - shadow.rgb;
+	COLOR.rgb = clamp(color.rgb - shadow.rgb, 0., 1.);
 	//COLOR.rgb = vec3(shadow_scanlines);
 	//COLOR.rgb = shadow.rgb;
 	//COLOR.rgb = color.rgb;
