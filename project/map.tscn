@@ -88,4 +88,3 @@ tile_set = SubResource("TileSet_2mblq")
 
 [node name="character_body_2d" parent="canvas_group" unique_id=1788209665 instance=ExtResource("2_wijl4")]
 position = Vector2(123, 72)
-friction = 0.4

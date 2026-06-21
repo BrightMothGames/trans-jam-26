@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="trans-jam-26"
-run/main_scene="uid://dndkpoo2di117"
+run/main_scene="uid://d0unbw5gggp58"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/use_filter=false
 boot_splash/image="uid://dl4hjbbecxxkc"
