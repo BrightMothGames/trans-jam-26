@@ -13,6 +13,8 @@ config_version=5
 config/name="trans-jam-26"
 run/main_scene="uid://dndkpoo2di117"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/use_filter=false
+boot_splash/image="uid://dl4hjbbecxxkc"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -36,7 +38,7 @@ naming/node_name_casing=2
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/aseprite_spritesheet_importer/plugin.cfg")
+enabled=PackedStringArray("res://addons/PaletteSwapShader/plugin.cfg", "res://addons/aseprite_spritesheet_importer/plugin.cfg")
 
 [input]
 

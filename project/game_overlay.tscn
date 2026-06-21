@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d0unbw5gggp58" path="res://map.tscn" id="1_d6a45"]
 [ext_resource type="Shader" uid="uid://ducas5uitgne4" path="res://game_overlay.gdshader" id="1_tgvcj"]
 [ext_resource type="Script" uid="uid://cju8ctdsfhm5h" path="res://game_overlay.gd" id="2_a4b8y"]
+[ext_resource type="Shader" uid="uid://cb1oqc0b8yetc" path="res://palswap.gdshader" id="2_j223s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tgvcj"]
 shader = ExtResource("1_tgvcj")
@@ -14,11 +15,23 @@ shader_parameter/shadow_strength = 0.25
 shader_parameter/brightness = 0.66
 shader_parameter/zoom = 1.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mblq"]
+shader = ExtResource("2_j223s")
+shader_parameter/color_count = 64
+shader_parameter/source = PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/output = PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
 [node name="node_2d" type="Node2D" unique_id=558646275]
 
-[node name="game_overlay" type="SubViewportContainer" parent="." unique_id=1856797561]
-texture_filter = 1
+[node name="canvas_group" type="CanvasGroup" parent="." unique_id=337108800]
 material = SubResource("ShaderMaterial_tgvcj")
+fit_margin = 0.0
+clear_margin = 0.0
+use_mipmaps = true
+
+[node name="game_overlay" type="SubViewportContainer" parent="canvas_group" unique_id=1856797561]
+texture_filter = 1
+material = SubResource("ShaderMaterial_2mblq")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -28,12 +41,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_a4b8y")
 
-[node name="sub_viewport" type="SubViewport" parent="game_overlay" unique_id=1350890041]
+[node name="sub_viewport" type="SubViewport" parent="canvas_group/game_overlay" unique_id=1350890041]
 handle_input_locally = false
 size = Vector2i(256, 144)
 render_target_update_mode = 4
 
-[node name="node_2d" parent="game_overlay/sub_viewport" unique_id=27854237 instance=ExtResource("1_d6a45")]
+[node name="node_2d" parent="canvas_group/game_overlay/sub_viewport" unique_id=27854237 instance=ExtResource("1_d6a45")]
 
 [node name="margin_container" type="MarginContainer" parent="." unique_id=750042023]
 offset_right = 256.0
@@ -137,10 +150,10 @@ value = 1.0
 allow_greater = true
 allow_lesser = true
 
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/lcd_gap" to="game_overlay" method="_on_lcd_gap_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/lcd_str" to="game_overlay" method="_on_lcd_str_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_x" to="game_overlay" method="_on_shad_x_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_y" to="game_overlay" method="_on_shad_y_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_str" to="game_overlay" method="_on_shad_str_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/bright" to="game_overlay" method="_on_bright_value_changed"]
-[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/zoom" to="game_overlay" method="_on_zoom_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/lcd_gap" to="canvas_group/game_overlay" method="_on_lcd_gap_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/lcd_str" to="canvas_group/game_overlay" method="_on_lcd_str_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_x" to="canvas_group/game_overlay" method="_on_shad_x_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_y" to="canvas_group/game_overlay" method="_on_shad_y_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/shad_str" to="canvas_group/game_overlay" method="_on_shad_str_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/bright" to="canvas_group/game_overlay" method="_on_bright_value_changed"]
+[connection signal="value_changed" from="margin_container/panel_container_2/v_box_container/zoom" to="canvas_group/game_overlay" method="_on_zoom_value_changed"]
